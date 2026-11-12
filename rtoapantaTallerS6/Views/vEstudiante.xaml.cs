@@ -33,7 +33,11 @@ public partial class vEstudiante : ContentPage
 
     private void lvEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-
+        if (e.SelectedItem is not Estudiante estudiante)
+            return;
+        //var objEstudiante = (Estudiante)e.SelectedItem;
+        Navigation.PushAsync(new Views.vActualizarEliminar(estudiante));
+        ((ListView)sender).SelectedItem = null;
     }
 
     private void btnAgregar_Clicked(object sender, EventArgs e)
