@@ -11,7 +11,7 @@ namespace rtoapantaTallerS6
 
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new vEstudiante());
+            return new Window(new NavigationPage(new vEstudiante()));
         }
     }
 }

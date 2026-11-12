@@ -2,8 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="rtoapantaTallerS6.vEstudiante"
-             Title="vEstudiante">
-    <VerticalStackLayout>
+             Title="Lista de Estudiantes">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
         <Label 
             Text="SEMANA 6:CRUD ESTUDIANTES"
             VerticalOptions="Center" 
@@ -45,5 +46,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        <Button x:Name="btnAgregar" Text="Agregar Estudiante" Clicked="btnAgregar_Clicked"/>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
